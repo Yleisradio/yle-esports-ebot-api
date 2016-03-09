@@ -1,0 +1,15 @@
+FROM ubuntu:14.04
+MAINTAINER Yleisradio
+
+RUN apt-get -y -qq update && apt-get -y -qq install software-properties-common && add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get -qq update && apt-get -qq -y install openjdk-8-jre-headless && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y install ca-certificates-java
+RUN update-ca-certificates -f
+
+COPY esports-ebot-api-v1.jar /opt/esports-api/
+COPY docker/start-api.sh /opt/esports-api/
+
+EXPOSE 8080
+ENV PACKAGE_VERSION={{PACKAGE_VERSION}}
+
+CMD bash -C '/opt/esports-api/start-api.sh';'bash'

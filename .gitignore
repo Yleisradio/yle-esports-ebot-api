@@ -1,0 +1,9 @@
+.idea
+.tf
+target
+*.iml
+.lein-failures
+.lein-repl-history
+.nrepl-port
+.DS_Store
+logs

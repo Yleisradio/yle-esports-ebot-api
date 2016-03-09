@@ -1,0 +1,27 @@
+{
+ :dev        {
+              :env "dev"
+              :db  {:host     "dockerhost"
+                    :db       "ebotv3"
+                    :user     "ebotclient"
+                    :port     "44090"
+                    :password "ebotclient"}
+              }
+ :test       {
+              :env "test"
+              :db  {:host     "dockerhost"
+                    :db       "ebotv3"
+                    :user     "ebotclient"
+                    :port     "44090"
+                    :password "ebotclient"}
+              }
+ :production {
+              :env "production"
+              :db  {:host     "dockerhost"
+                    :db       "ebotv3"
+                    :user     "ebotclient"
+                    :port     "44090"
+                    :password "ebotclient"}
+              }
+}
+
